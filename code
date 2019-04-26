@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Net.Sockets;
+namespace Chat
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e) // nick
+        {
+            /* Charact u = new Charact();
+             textBox3.Text = u.user;*/
+            //if (textBox3.Text == null) textBox1.Text = "Введите ник";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e) // field
+        {
+            Obj obj = new Obj();
+            const string host = "127.0.0.1";
+            const int port = 8888;
+            obj.stream = obj.client.GetStream();
+            obj.client.Connect(host, port);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e) // text
+        {
+            Obj obj = new Obj();
+            string messege = textBox2.Text;
+            byte[] data = Encoding.Unicode.GetBytes(messege);
+            obj.stream.Write(data, 0, data.Length);
+        }
+    }
+    class Obj
+    {
+        public TcpClient client = new TcpClient();
+        public NetworkStream stream;
+      //  public string user;
+        public const string host = "127.0.0.1";
+        public const int port = 8888;
+        void Mes()
+        {
+            
+        }
+    }
+}
