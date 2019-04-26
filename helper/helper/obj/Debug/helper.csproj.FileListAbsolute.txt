@@ -1,0 +1,7 @@
+D:\C#\helper\helper\bin\Debug\helper.exe.config
+D:\C#\helper\helper\bin\Debug\helper.exe
+D:\C#\helper\helper\bin\Debug\helper.pdb
+D:\C#\helper\helper\obj\Debug\helper.csprojAssemblyReference.cache
+D:\C#\helper\helper\obj\Debug\helper.csproj.CoreCompileInputs.cache
+D:\C#\helper\helper\obj\Debug\helper.exe
+D:\C#\helper\helper\obj\Debug\helper.pdb
